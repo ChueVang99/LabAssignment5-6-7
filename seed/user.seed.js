@@ -1,8 +1,8 @@
 [{
   "id": 1,
-  "email": "chuevang10@gmail.com",
+  "email": "chuevang@gmail.com",
   "username": "chue",
-  "password": "vang",
+  "password": "545313",
   "super_admin": true,
   "site_admin": true,
   "hash": "CVI2C3WKYEdbL4yi3B9eE",

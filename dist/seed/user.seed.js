@@ -1,6 +1,6 @@
 [{
   "id": 1,
-  "email": "chuevang10@gmail.com",
+  "email": "chuevang@gmail.com",
   "username": "chue",
   "password": "545313",
   "super_admin": true,
