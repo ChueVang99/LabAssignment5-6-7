@@ -69,7 +69,6 @@ export class Car {
 
   createCar(model: any) {
     return async (req: Request, res: Response, next: NextFunction) => {
-      console.log('req.body===>', req.body);
       let carCtrl = model.controller;
       let resp = await carCtrl.create(req, null, null);
       res.json({ message: 'Success', resp });

@@ -74,7 +74,6 @@ class Car {
     }
     createCar(model) {
         return (req, res, next) => __awaiter(this, void 0, void 0, function* () {
-            console.log('req.body===>', req.body);
             let carCtrl = model.controller;
             let resp = yield carCtrl.create(req, null, null);
             res.json({ message: 'Success', resp });
