@@ -34,11 +34,24 @@ export class Car {
         method: 'POST',
         callback: this.createCar,
         requireToken: true,
+      },
+      {
+        route: '/update-car/id/:id',
+        method: 'PUT',
+        callback: this.updateCar,
+        requireToken: true,
       }
     ]
     ];
   }
-  
+
+  updateCar(model: any) {
+    return async (req: Request, res: Response, next: NextFunction) => {
+      let carCtrl = model.controller;
+      let resp = await carCtrl.update(req, null, null);
+      res.json({ message: 'Success', resp });
+    }
+  }
 
   createCar(model: any) {
     return async (req: Request, res: Response, next: NextFunction) => {
