@@ -28,9 +28,25 @@ export class Car {
         method: 'POST',
         callback: this.getCarById,
         requireToken: true,
+      },
+      {
+        route: '/create-car',
+        method: 'POST',
+        callback: this.createCar,
+        requireToken: true,
       }
     ]
     ];
+  }
+  
+
+  createCar(model: any) {
+    return async (req: Request, res: Response, next: NextFunction) => {
+      console.log('req.body===>', req.body);
+      let carCtrl = model.controller;
+      let resp = await carCtrl.create(req, null, null);
+      res.json({ message: 'Success', resp });
+    }
   }
 
   getAllCars(model: any) {
